@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Edge-Card</title>
+  <style type="text/css" media="all">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      background: black;
+      font-family: 'Courier New',Courier,monospace;
+    }
+
+    .container {
+      display: grid;
+      place-items: center;
+      position: relative;
+      width: 255px;
+      height: 355px;
+      border-radius: 1em;
+      background: linear-gradient(50deg,#2a5a3b,#1e4886);
+      overflow: hidden;
+      box-shadow: 5px 5px 10px #0072ff;
+
+    }
+    .container::before {
+      content: "";
+      position: absolute;
+      width: 450px;
+      height: 35px;
+      top: 0;
+      right: 35px;
+      transition: 1.9s;
+      background: linear-gradient(50deg,#66ff00,cyan);
+      transform: rotate(-45deg) translate(0,-100px);
+
+    }
+    .card {
+      display: grid;
+      place-items: center;
+      width: 247px;
+      height: 347px;
+      background: black;
+      border-radius: .8em;
+      z-index: 1;
+      color: #858585;
+      overflow: hidden;
+      padding: 1em;
+      text-align: center;
+      cursor: pointer;
+      transition: .5s ease;
+
+    }
+
+    .card:hover {
+      color: #fff;
+
+    }
+
+    .container:hover::before {
+      animation: effect 2s;
+    }
+
+    @keyframes effect {
+      100% {
+        transform: rotate(-45deg) translate(0,450px);
+      }
+    }
+
+    .card h1 {
+      text-align: center;
+      font-size: 90px;
+
+    }
+
+    h1:hover {
+      font-size: 90px;
+      background: -webkit-linear-gradient(#ff6b08, #cf23cf,#eedd44);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1 class="text">I'M SID</h1>
+      <p>
+        ML/SDE/WEB-DEV
+      </p>
+    </div>
+  </div>
+</body>
+</html>
